@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archana & Naveen - Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Lora', serif; /* Default font is Lora for content */
+            color: #61a2df;
+            overflow: hidden;
+        }
+
+        /* Full page background with gradient */
+        .background {
+            background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(255, 94, 77, 0.6)), url('your-background-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Main content container */
+        .content {
+            max-width: 90%;  /* Made it more flexible for small screens */
+            width: 90%;
+            padding: 30px;
+            background-color: rgba(50, 70, 97, 0.6);
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(96, 94, 161, 0.3);
+            margin: 0 auto;
+        }
+
+        /* Heading */
+		h1 {
+			font-family: 'Roboto', sans-serif; /* Changed to Roboto */
+			font-size: 30px;
+			color: #fff;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			animation: fadeIn 2s ease-out;
+		}
+        h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 40px;
+            color: #072358;
+            margin-bottom: 20px;
+            animation: fadeIn 2.5s ease-out;
+        }
+
+        /* Countdown Timer */
+        .countdown {
+            font-family: 'Lora', serif; /* Lora for countdown */
+            font-size: 20px;
+            color: #081657;
+            margin: 20px 0;
+            animation: fadeIn 3s ease-out;
+        }
+
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;  /* Reduced gap */
+            flex-wrap: wrap;
+        }
+
+        .countdown span {
+            text-align: center;
+            color: #c1e1e2;
+            font-size: 24px; /* Reduced font size for countdown */
+            font-weight: bold;
+        }
+
+        .countdown span p {
+            font-size: 14px; /* Reduced font size for labels */
+            color: #11095f;
+            margin-top: 5px;
+        }
+
+        /* Details section styling */
+        .details {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-weight: 300;
+            color: #baf1ef;
+            animation: fadeIn 3s ease-out;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .details p {
+            margin: 12px 0;
+        }
+
+        /* RSVP Button */
+        .rsvp {
+            text-decoration: none;
+            padding: 12px 25px;
+            background-color: #111615;
+            color: rgb(150, 145, 145);
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            display: inline-block;
+            transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0 5px 15px rgba(49, 12, 12, 0.2);
+        }
+
+        .rsvp:hover {
+            transform: scale(1.1);
+            background-color: #8ba5a3;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsive Design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 16px;
+            }
+
+            h2 {
+                font-size: 28px; /* Adjusted font size for better fit */
+            }
+
+            .countdown-container {
+                gap: 10px;  /* Further reduced gap */
+            }
+
+            .countdown span {
+                font-size: 22px;  /* Reduced size for better fit */
+            }
+
+            .countdown span p {
+                font-size: 12px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .rsvp {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            .details {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            .details p {
+                margin: 10px 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="background">
+        <div class="content">
+            <h1>You're Invited!</h1>
+
+            <!-- Couple's Names with "Weds" in the middle -->
+            <h2 class="couple">
+                <span class="name">Archana</span>
+                <span class="wed">weds</span>
+                <span class="name">Naveen</span>
+            </h2>
+            
+            <!-- Event Details -->
+            <div class="details">
+                <p><strong><u>Date:</u><br></strong> 13th June 2025, Friday</p> 
+                <p><strong><u>Time:</u><br></strong> 12:15 PM </p>
+                <p><strong><u>Venue:</u><br></strong> Manikya Soudha, <br>manikya nagar , Humanabad (tq) Bidar (Dist)</p>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="countdown">
+                <div class="countdown-container">
+                    <span id="days">
+                        <p id="days-number"></p>
+                        <p>Days</p>
+                    </span>
+                    <span id="hours">
+                        <p id="hours-number"></p>
+                        <p>Hours</p>
+                    </span>
+                    <span id="minutes">
+                        <p id="minutes-number"></p>
+                        <p>Minutes</p>
+                    </span>
+                    <span id="seconds">
+                        <p id="seconds-number"></p>
+                        <p>Seconds</p>
+                    </span>
+                </div>
+            </div>
+
+            <!-- RSVP Button -->
+            <a href="https://maps.app.goo.gl/8HxQv1i8o6zuH3Fv6?g_st=aw" target="_blank" class="rsvp">LINK TO GOOGLE MAPS</a>
+        </div>
+    </div>
+
+    <script>
+        // Set the date of the wedding
+        const weddingDate = new Date("2025-06-13T12:15:00").getTime();
+
+        // Update the countdown every second
+        const countdownInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            // Calculate the time components
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the countdown
+            document.getElementById("days-number").innerText = days;
+            document.getElementById("hours-number").innerText = hours;
+            document.getElementById("minutes-number").innerText = minutes;
+            document.getElementById("seconds-number").innerText = seconds;
+
+            // If the countdown is finished, display a message
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.querySelector(".countdown").innerText = "The big day is here!";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
